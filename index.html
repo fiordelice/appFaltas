@@ -634,7 +634,7 @@
       try {
         const snapshot = await db.collection('faltas')
           .where('cs', '==', csFiltro)
-          .where('motivo', '==', '')
+
           .get();
 
         const registrosFiltrados = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
